@@ -1,0 +1,380 @@
+
+<!--Header start-->
+<nav class="navbar  navbar-expand-lg" style="background: #FFFFFF 0% 0% no-repeat padding-box;;box-shadow: 0px 4px 8px #002DAA14;opacity: 1;
+backdrop-filter: blur(48px);
+">
+  <div class="container-fluid">
+      <a class="navbar-brand" >
+        <button class="me-2 d-flex justify-content-between align-items-center px-4 py-3 d-none d-lg-flex"  type="button" style="background-color: #E00046;color:#FFFFFF;outline: none;border:none" width="174px" height="42px">
+          <span style="margin-right: 10px;">BLINKTICKETS</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+              <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+          </svg>
+      </button>
+      </a>
+
+      <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <i title="" class="fa fa-bars"></i>
+      </button>
+
+      <div class="collapse navbar-collapse navbar-default" id="navbarTogglerDemo02" style="padding-right: 200px;">
+           <ul class="navbar-nav mx-auto my-2 mb-lg-0 fw-bold"  >
+              <li class="nav-item " style="width: 240px;color:black ;border-right: 2px solid #00000014;padding-left: 5px;">
+                  <a style="color:black;" href="#"><h6>Location</h6>Hayward,Oakland,+2more </a>
+              </li>
+              
+              <li class="nav-item " style="width: 240px;color:black ;border-right: 2px solid #00000014;padding-left: 10px;">
+                  <a style="color:black" href="#"><h6>Date</h6>Select date</a>
+              </li>
+             
+              <li class="nav-item " style="width: 240px;padding-left: 10px;">
+                  <a style="color:black" href="#"><h6>Event type</h6>select event type</a>
+              </li>
+              
+          </ul> 
+          
+          
+      </div>
+      <img src="images/WOImg.svg" alt="Logo" width="24" height="24" class="profile-image">
+  </div>
+</nav>
+<!--Header end-->
+
+<!--Caurosal start-->
+<div class="container-fluid " style="margin-top: 100px;">
+   
+    <div id="carousel"  (keydown)="handleKeyboardEvent($event)" tabindex="0">
+       <div class="row mt-sm-4"  >
+      <div class="col-lg-4  " class="card2 "    *ngFor="let cardObj of cards3 ;let i = index" [ngClass]="getClass(i)">
+
+        <div  class="img2" style="gap: 1rem;"  
+          style="box-shadow: 0px 0px 15px #ffffff; width: 100%;" >
+          <div  style="background-image: url({{cardObj.img}});margin: auto;
+        background-size: cover;height:400px !important;border-radius: 15px;background-position: center center;"></div>
+
+        
+        </div>
+
+      </div>
+       </div>
+      <div class="h-100 d-flex justify-content-between ">
+        <button (click)="moveToSelected('prev')" style="position: relative;
+            height: 100%;
+            
+            width: 100px;
+            background-color: #fffcf94f;
+            z-index: 20;
+            border: none;
+            outline: none;"><i class="fa-solid fa-chevron-up fa-rotate-270"
+            style="color: #D91046; background-color: white; border-radius: 50%; height: 30px; width: 30px;"></i>
+        </button>
+        <button (click)="moveToSelected('next')" style="position: relative;
+  height: 100%;
+  
+  width: 100px;
+  background-color: #fffcf94f;
+  z-index: 20;
+  border: none;
+  outline: none;
+  "><i class="fa-solid fa-chevron-up fa-rotate-90  "
+            style="color: #D91046; background-color: white; border-radius: 50%; height: 30px; width: 30px;"></i></button>
+      </div>
+    </div>
+
+  </div>
+  <!--Caurosal end-->
+
+  <!--Genre event start-->
+  <div style="font-size: 32px;font-family: Proxima nova,bold;color: #000000DE;padding-left: 50px;padding-top: 50px;">Browse events by genre</div>
+
+  <div class="container-fluid">
+     <div class="row" >
+       <div class="card text-center col-lg-2  col-sm-4 col-4 genreCard"  style="background: transparent  padding-box;border: none;">
+        
+          <img src="images/Group 150816.svg" class="card-img-top" alt="..."> 
+          <div class="card-footer" style="background-color: #FFFFFF;border: none;">
+            <h6>Party</h6>
+            <small>20 events</small>
+          </div>
+        
+       </div>
+       <div class="card text-center col-lg-2  col-sm-4 col-4"  style="background: transparent  padding-box;border: none;">
+        
+        <img src="images/Group 150817.svg" class="card-img-top" alt="..."> 
+        <div class="card-footer" style="background-color: #FFFFFF;border: none;">
+          <h6>Comedy</h6>
+          <small>20 events</small>
+        </div>
+      
+     </div>
+     <div class="card text-center col-lg-2  col-sm-4 col-4"  style="width:120px;height:120px;background: transparent  padding-box;border: none;">
+        
+      <img src="images/Group 150818.svg" class="card-img-top" alt="..."> 
+      <div class="card-footer" style="background-color: #FFFFFF;border: none;">
+        <h6>Conference</h6>
+        <small>20 events</small>
+      </div>
+    
+   </div>
+   <div class="card text-center col-lg-2 col-mt-md-5 col-sm-4 col-4"  style="width:120px;height:120px;background: transparent  padding-box;border: none;">
+        
+    <img src="images/Group 150819.svg" class="card-img-top" alt="..."> 
+    <div class="card-footer" style="background-color: #FFFFFF;border: none;">
+      <h6>Trek</h6>
+      <small>20 events</small>
+    </div>
+  
+ </div>
+ <div class="card text-center col-lg-2 col-mt-md-5 col-sm-4 col-4"  style="width:120px;height:120px;background: transparent  padding-box;border: none;">
+        
+  <img src="images/Group 150820.svg" class="card-img-top" alt="..."> 
+  <div class="card-footer" style="background-color: #FFFFFF;border: none;">
+    <h6>Concert</h6>
+    <small>20 events</small>
+  </div>
+
+</div>
+<div class="card text-center col-lg-2 col-mt-md-5 col-sm-4 col-4"  style="width:120px;height:120px;background: transparent  padding-box;border: none;">
+        
+  <img src="images/Group 150819 (1).svg" class="card-img-top" alt="..."> 
+  <div class="card-footer" style="background-color: #FFFFFF;border: none;">
+    <h6>Meetups</h6>
+    <small>20 events</small>
+  </div>
+
+</div>
+
+     
+  </div>
+
+  <!--Genre event end-->
+
+  <div class="tabView " style="font-size: 32px;font-family: Proxima nova,bold;color: #000000DE;padding-left: 50px;padding-top: 50px;">Treanding</div>
+
+  <div id="carouselExampleControls" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="card-wrapper container-sm-mt-5 d-flex  justify-content-around">
+          <div class="row flex-row flex-nowrap overflow-hidden   p-1 pr-0">
+            <div class="col-lg-3 col-6 col-md-6  col-mt-md-5"  *ngFor="let cardObj of cards2" >
+                <div class="card  h-100vh" style="height: 100%;">
+              <div class=" img2 text-center  mr-4 border " style="gap: 1rem;"
+            style="width: 100%">
+                <!-- <div style="background-image: url({{cardObj.img}});
+                background-size: cover;height:230px;background-position: center;" ></div> -->
+                <div style="background-image: url({{cardObj.img}});
+          background-size: cover;height:190px !important;background-position: center;"></div>
+          
+                  <div class="card-body d-flex flex-column" style="background-color: white;">
+   
+              <span class="h5" style="font-weight: 200; text-align: justify">{{cardObj.title}}
+              </span>
+              <span style="color:#00000099;font-size: 14px;text-align: justify"><img src={{cardObj.calender}}><label >{{cardObj.date}}</label> </span>
+              
+              <span style="color:#00000099;font-size: 14px;text-align: justify"><img src={{cardObj.location}}> Oakland</span>
+
+              <span style="color:#00000099;font-size: 14px;text-align: justify;padding-top:8px"><img src={{cardObj.label}}> </span>
+
+              <div class="row mt-2">
+                <div class="d-flex justify-content-between  col-12 " style="background: #FFF9F9 0% 0% no-repeat padding-box;
+                border-radius: 6px;padding-top: 6px;">
+                  
+                  <div class="col-auto p-0 ">
+                    <p class=" mb-2 " style="text-align: start;" style="font-size: 12px; font-weight: 600; color:#000000">
+                      From $57.67
+                    </p>
+                  </div>
+                  <div class="col-auto p-0">
+                    <p class=" mb-2 " style="text-align: end;" style="font-size: 12px; font-weight: 600; color:red">
+                      BUY NOW
+                    </p>
+                  </div>
+                </div>
+          
+              </div>
+              
+            </div>
+                 
+                  
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+      </div>
+      <div class="carousel-item ">
+        <div class="card-wrapper container-sm-mt-5 d-flex   justify-content-around">
+          <div class="row flex-row flex-nowrap overflow-hidden  mt-2 p-1 pr-0">
+            <div class="col-lg-3 col-6 col-md-6  "  *ngFor="let cardObj of cards2" >
+                <div class="card  h-100vh" style="height: 100%;">
+              <div class=" img2 text-center  mr-4 border " style="gap: 1rem;"
+            style="width: 100%">
+                <!-- <div style="background-image: url({{cardObj.img}});
+                background-size: cover;height:230px;background-position: center;" ></div> -->
+                <div style="background-image: url({{cardObj.img}});
+          background-size: cover;height:190px !important;background-position: center;"></div>
+          
+                  <div class="card-body d-flex flex-column" style="background-color: white;">
+   
+              <span class="h5" style="font-weight: 200; text-align: justify">{{cardObj.title}}
+              </span>
+              <span style="color:#00000099;font-size: 14px;text-align: justify"><img src={{cardObj.calender}}><label >{{cardObj.date}}</label> </span>
+              
+              <span style="color:#00000099;font-size: 14px;text-align: justify"><img src={{cardObj.location}}> Oakland</span>
+
+              <span style="color:#00000099;font-size: 14px;text-align: justify;padding-top:8px"><img src={{cardObj.label}}> </span>
+
+              <div class="row mt-2">
+                <div class="d-flex justify-content-between  col-12 " style="background: #FFF9F9 0% 0% no-repeat padding-box;
+                border-radius: 6px;padding-top: 6px;">
+                  
+                  <div class="col-auto p-0 ">
+                    <p class=" mb-2 " style="text-align: start;" style="font-size: 12px; font-weight: 600; color:#000000">
+                      From $57.67
+                    </p>
+                  </div>
+                  <div class="col-auto p-0">
+                    <p class=" mb-2 " style="text-align: end;" style="font-size: 12px; font-weight: 600; color:red">
+                      BUY NOW
+                    </p>
+                  </div>
+                </div>
+          
+              </div>
+              
+            </div>
+                 
+                  
+                </div>
+                </div>
+            </div>
+            </div>
+      </div>
+      </div>
+      <div class="carousel-item  ">
+        <div class="card-wrapper container-sm-mt-5 d-flex  justify-content-around">
+          <div class="row flex-row flex-nowrap overflow-hidden  tabView mt-2 p-1 pr-0">
+            <div class="col-lg-3 col-6 col-md-6  "  *ngFor="let cardObj of cards2" >
+                <div class="card  h-100vh" style="height: 100%;">
+              <div class=" img2 text-center  mr-4 border " style="gap: 1rem;"
+            style="width: 100%">
+                <!-- <div style="background-image: url({{cardObj.img}});
+                background-size: cover;height:230px;background-position: center;" ></div> -->
+                <div style="background-image: url({{cardObj.img}});
+          background-size: cover;height:190px !important;background-position: center;"></div>
+          
+                  <div class="card-body d-flex flex-column" style="background-color: white;">
+   
+              <span class="h5" style="font-weight: 200; text-align: justify">{{cardObj.title}}
+              </span>
+              <span style="color:#00000099;font-size: 14px;text-align: justify"><img src={{cardObj.calender}}><label >{{cardObj.date}}</label> </span>
+              
+              <span style="color:#00000099;font-size: 14px;text-align: justify"><img src={{cardObj.location}}> Oakland</span>
+
+              <span style="color:#00000099;font-size: 14px;text-align: justify;padding-top:8px"><img src={{cardObj.label}}> </span>
+
+              <div class="row mt-2">
+                <div class="d-flex justify-content-between  col-12 " style="background: #FFF9F9 0% 0% no-repeat padding-box;
+                border-radius: 6px;padding-top: 6px;">
+                  
+                  <div class="col-auto p-0 ">
+                    <p class=" mb-2 " style="text-align: start;" style="font-size: 12px; font-weight: 600; color:#000000">
+                      From $57.67
+                    </p>
+                  </div>
+                  <div class="col-auto p-0">
+                    <p class=" mb-2 " style="text-align: end;" style="font-size: 12px; font-weight: 600; color:red">
+                      BUY NOW
+                    </p>
+                  </div>
+                </div>
+          
+              </div>
+              
+            </div>
+                 
+                  
+                </div>
+                </div>
+            </div>
+            </div>
+      </div>
+    </div>
+    <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button> -->
+  </div>
+  </div>
+  
+  
+
+
+<!--Spotlight start-->
+
+<div class="" style="font-size: 32px;font-family: Proxima nova,bold;color: #000000DE;padding-left: 50px;padding-top: 50px;">Spotlight</div>
+
+<div class="card bg-dark text-white " >
+  <img src="images/Spotlightcover.png" class="card-img" alt="...">
+  
+  <div class="card-img-overlay " class="top-right" >
+    <h5 class="card-title" >San Francisco Bay Area events:<br>experience the Golden City </h5>
+    
+    <p class="card-text2" >There’s something magical about San Francisco, whether you’re cruising</p>
+    <p class="card-text2">by the Golden Gate Bridge on a boat tour or dancing at a party in the Mission.</p>
+    
+    
+    <p class="card-text2"><img src="images/Calendar.png" > Oct 1, Sat | 7:00 PM Onwards</p>
+    <p class="card-text2"><img src="images/Location.png"> Oakland</p>
+    <button type="button" class="btn btn btn-lg" style="background-color: #FFFFFF;color:red">GRAB TICKETS</button>
+  </div>
+ 
+</div>
+  <!--Spotlight end-->
+  
+
+ 
+    <div class="card mb-3 mt-5" style="max-width: 100%;background-color: #E00046;">
+      <div class="row g-0">
+        <div class="col-md-2" class="bridgeImg" >
+          <img src="images/NoPath-Copy(5).png" class="img-fluid rounded-start"  alt="..." width="200px" >
+        </div>
+        <div class="col-md-8">
+          <div class="card-body text-white">
+            <h5  style="font-size: 32px;color:#FFFFFF">San Francisco Diaries</h5>
+            <p class="card-text">San Francisco is famous for its diverse events, blending culture, tech, and entertainment. Must-attend events include Dreamforce and TechCrunch Disrupt for tech enthusiasts, the Pride Parade, and the Chinese New Year Festival for cultural vibrancy. Outside Lands draws music lovers, while Eat Drink SF caters to foodies. These events highlight San Francisco’s innovative and inclusive spirit, making them popular with locals and visitors alike.</p>
+            <p class="card-text"><small><img src="images/Red.png"></small></p>
+          </div>
+        </div>
+      </div>
+    
+  <!-- <div class="row" style="margin-top: 33px;
+  left: 0px;
+  width: 100%;
+  height: 306px;
+  background: var(--unnamed-color-e00046) 0% 0% no-repeat padding-box;
+  background: #E00046 0% 0% no-repeat padding-box;
+  opacity: 1;">
+    <div class="col-2" style="padding: 50px;">
+       <img src="images/NoPath-Copy(5).png" class="imgWidth">
+    </div>
+    <div class="col-8">
+     <div class="row" style="padding: 50px;">
+       <div class="col-12">
+        <p style="font-size: 32px;color:#FFFFFF">San Francisco Diaries</p>
+       </div>
+       <div class="col-12">
+        <p style="font-size: 16px;color:#FFFFFF;text-align: justify;"> San Francisco is famous for its diverse events, blending culture, tech, and entertainment. Must-attend events include Dreamforce and TechCrunch Disrupt for tech enthusiasts, the Pride Parade, and the Chinese New Year Festival for cultural vibrancy. Outside Lands draws music lovers, while Eat Drink SF caters to foodies. These events highlight San Francisco’s innovative and inclusive spirit, making them popular with locals and visitors alike.</p>
+       </div>
+       <div class="col-12">
+
+       </div>
+     </div>
+    </div>
+  </div> -->
+  </div>
