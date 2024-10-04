@@ -148,6 +148,10 @@ backdrop-filter: blur(48px);
      
   </div>
 
+  
+   
+
+
   <!--Genre event end-->
 
   <div class="tabView " style="font-size: 32px;font-family: Proxima nova,bold;color: #000000DE;padding-left: 50px;padding-top: 50px;">Treanding</div>
@@ -155,18 +159,18 @@ backdrop-filter: blur(48px);
   <div id="carouselExampleControls" class="carousel carousel-dark slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <div class="card-wrapper container-sm-mt-5 d-flex  justify-content-around">
-          <div class="row flex-row flex-nowrap overflow-hidden   p-1 pr-0">
-            <div class="col-lg-3 col-6 col-md-6  col-mt-md-5"  *ngFor="let cardObj of cards2" >
-                <div class="card  h-100vh" style="height: 100%;">
-              <div class=" img2 text-center  mr-4 border " style="gap: 1rem;"
-            style="width: 100%">
+        <div class="container-fluid card-wrapper">
+          <div class="card-deck mb-3 text-center">
+          <div class="row flex-row flex-nowrap overflow-hidden  tabView mt-2 p-1 pr-0">
+            <div class="col-lg-3 col-12 col-md-6  col-mt-md-5 "  *ngFor="let cardObj of cards2" >
+                <div class="card  vh-100" style="height: 100%;">
+             
                 <!-- <div style="background-image: url({{cardObj.img}});
                 background-size: cover;height:230px;background-position: center;" ></div> -->
                 <div style="background-image: url({{cardObj.img}});
-          background-size: cover;height:190px !important;background-position: center;"></div>
+                background-size: cover;height:190px !important;background-position: center;"></div>
           
-                  <div class="card-body d-flex flex-column" style="background-color: white;">
+             <div class="card-body d-flex flex-column" style="background-color: white;">
    
               <span class="h5" style="font-weight: 200; text-align: justify">{{cardObj.title}}
               </span>
@@ -174,9 +178,9 @@ backdrop-filter: blur(48px);
               
               <span style="color:#00000099;font-size: 14px;text-align: justify"><img src={{cardObj.location}}> Oakland</span>
 
-              <span style="color:#00000099;font-size: 14px;text-align: justify;padding-top:8px"><img src={{cardObj.label}}> </span>
+              <span style="color:#00000099;font-size: 14px;text-align: justify;padding-top:8px;padding-bottom: 6px;"><img src={{cardObj.label}}> </span>
 
-              <div class="row mt-2">
+              <div class="row mt-auto">
                 <div class="d-flex justify-content-between  col-12 " style="background: #FFF9F9 0% 0% no-repeat padding-box;
                 border-radius: 6px;padding-top: 6px;">
                   
@@ -193,29 +197,29 @@ backdrop-filter: blur(48px);
                 </div>
           
               </div>
-              
-            </div>
+                </div>
                  
                   
-                </div>
+                
                 </div>
             </div>
             </div>
+          </div>
         </div>
       </div>
       <div class="carousel-item ">
-        <div class="card-wrapper container-sm-mt-5 d-flex   justify-content-around">
-          <div class="row flex-row flex-nowrap overflow-hidden  mt-2 p-1 pr-0">
-            <div class="col-lg-3 col-6 col-md-6  "  *ngFor="let cardObj of cards2" >
-                <div class="card  h-100vh" style="height: 100%;">
-              <div class=" img2 text-center  mr-4 border " style="gap: 1rem;"
-            style="width: 100%">
+        <div class="container-fluid card-wrapper">
+          <div class="card-deck mb-3 text-center">
+          <div class="row flex-row flex-nowrap overflow-hidden  tabView mt-2 p-1 pr-0">
+            <div class="col-lg-3 col-12 col-md-6  col-mt-md-5 "  *ngFor="let cardObj of cards2" >
+                <div class="card  vh-100" style="height: 100%;">
+             
                 <!-- <div style="background-image: url({{cardObj.img}});
                 background-size: cover;height:230px;background-position: center;" ></div> -->
                 <div style="background-image: url({{cardObj.img}});
-          background-size: cover;height:190px !important;background-position: center;"></div>
+                background-size: cover;height:190px !important;background-position: center;"></div>
           
-                  <div class="card-body d-flex flex-column" style="background-color: white;">
+             <div class="card-body d-flex flex-column" style="background-color: white;">
    
               <span class="h5" style="font-weight: 200; text-align: justify">{{cardObj.title}}
               </span>
@@ -223,9 +227,9 @@ backdrop-filter: blur(48px);
               
               <span style="color:#00000099;font-size: 14px;text-align: justify"><img src={{cardObj.location}}> Oakland</span>
 
-              <span style="color:#00000099;font-size: 14px;text-align: justify;padding-top:8px"><img src={{cardObj.label}}> </span>
+              <span style="color:#00000099;font-size: 14px;text-align: justify;padding-top:8px;padding-bottom: 6px;"><img src={{cardObj.label}}> </span>
 
-              <div class="row mt-2">
+              <div class="row mt-auto">
                 <div class="d-flex justify-content-between  col-12 " style="background: #FFF9F9 0% 0% no-repeat padding-box;
                 border-radius: 6px;padding-top: 6px;">
                   
@@ -242,29 +246,29 @@ backdrop-filter: blur(48px);
                 </div>
           
               </div>
-              
-            </div>
+                </div>
                  
                   
-                </div>
+                
                 </div>
             </div>
             </div>
-      </div>
+          </div>
+        </div>
       </div>
       <div class="carousel-item  ">
-        <div class="card-wrapper container-sm-mt-5 d-flex  justify-content-around">
+      <div class="container-fluid card-wrapper">
+          <div class="card-deck mb-3 text-center">
           <div class="row flex-row flex-nowrap overflow-hidden  tabView mt-2 p-1 pr-0">
-            <div class="col-lg-3 col-6 col-md-6  "  *ngFor="let cardObj of cards2" >
-                <div class="card  h-100vh" style="height: 100%;">
-              <div class=" img2 text-center  mr-4 border " style="gap: 1rem;"
-            style="width: 100%">
+            <div class="col-lg-3 col-12 col-md-6  col-mt-md-5 "  *ngFor="let cardObj of cards2" >
+                <div class="card  vh-100" style="height: 100%;">
+             
                 <!-- <div style="background-image: url({{cardObj.img}});
                 background-size: cover;height:230px;background-position: center;" ></div> -->
                 <div style="background-image: url({{cardObj.img}});
-          background-size: cover;height:190px !important;background-position: center;"></div>
+                background-size: cover;height:190px !important;background-position: center;"></div>
           
-                  <div class="card-body d-flex flex-column" style="background-color: white;">
+             <div class="card-body d-flex flex-column" style="background-color: white;">
    
               <span class="h5" style="font-weight: 200; text-align: justify">{{cardObj.title}}
               </span>
@@ -272,9 +276,9 @@ backdrop-filter: blur(48px);
               
               <span style="color:#00000099;font-size: 14px;text-align: justify"><img src={{cardObj.location}}> Oakland</span>
 
-              <span style="color:#00000099;font-size: 14px;text-align: justify;padding-top:8px"><img src={{cardObj.label}}> </span>
+              <span style="color:#00000099;font-size: 14px;text-align: justify;padding-top:8px;padding-bottom: 6px;"><img src={{cardObj.label}}> </span>
 
-              <div class="row mt-2">
+              <div class="row mt-auto">
                 <div class="d-flex justify-content-between  col-12 " style="background: #FFF9F9 0% 0% no-repeat padding-box;
                 border-radius: 6px;padding-top: 6px;">
                   
@@ -291,15 +295,15 @@ backdrop-filter: blur(48px);
                 </div>
           
               </div>
-              
-            </div>
+                </div>
                  
                   
-                </div>
+                
                 </div>
             </div>
             </div>
-      </div>
+          </div>
+        </div>
     </div>
     <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -378,3 +382,5 @@ backdrop-filter: blur(48px);
     </div>
   </div> -->
   </div>
+
+ 
