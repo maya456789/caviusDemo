@@ -68,6 +68,7 @@
   justify-content: center;  /* Centering y-axis */
   align-items :center; /* Centering x-axis */
   }
+ 
 
 
   @media screen and (min-width: 300px) and (max-width: 576px){
@@ -80,7 +81,9 @@
       display:none;
     }  
 
-    
+    .largeBtn{
+      display: none;
+    }
 
     .imgWidth{
       width: 130px;
@@ -578,8 +581,17 @@
       font-size: 12px;
     }
   }
+
+  @media (min-width:576px){
+    .smallBtn{
+      display:none
+    }
+  }
   
   @media screen and (max-width: 567px)  {
+
+   
+
     .card-outer{
       padding: 0px !important;
     }
