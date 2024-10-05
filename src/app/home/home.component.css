@@ -15,7 +15,74 @@
     padding-top: 50px;
   }
 
-  
+  .form-check-input{
+    width: 30px;
+    height: 18px;
+    
+  }
+
+   .form-check-label{
+    padding-left: 20px;
+   }
+
+   input[type=checkbox]{
+    accent-color: red;
+}
+
+.scrolling-wrapper{
+	overflow-x: auto;
+}
+
+body{
+	background-color: black;
+	color: #fff;
+	font-family: 'system-ui';
+}
+
+h1{
+	font-weight: 700;
+	font-size: 3.4em;
+}
+
+.subtitle{
+	font-size: 1.25em;
+	opacity: 0.65;
+}
+
+.card-block{
+	height: 300px;
+	background-color: #fff;
+	border: none;
+	background-position: center;
+	background-size: cover;
+	transition: all 0.2s ease-in-out !important;
+	border-radius: 24px;
+	&:hover{
+		transform: translateY(-5px);
+		box-shadow: none;
+		opacity: 0.9;
+	}
+}
+
+
+
+
+
+  /* Pagination custom design*/
+  .pagination{
+    color: red;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+
+  .pagination::ng-deep .ngx-pagination .current{
+    background-color: red;
+  }
+
+
+  .ngx-pagination .pagination-next::before{
+    content:'\bb'
+  }
 
 /* Top right text */
 .top-right {
@@ -75,6 +142,10 @@
     .card-title{
       font-size: 16px;
       padding-top: 0px !important;
+    }
+
+    .spotlight{
+      max-height: 22rem;
     }
 
       .card-text2{

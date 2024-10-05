@@ -7,6 +7,10 @@ import { Component, HostListener } from '@angular/core';
 })
 export class HomeComponent {
 
+  p: number = 1;
+  count: number = 0;
+  tableSize: number = 6;
+
   selectedIdx = 1; // Initially selected index
 
   getClass(index: number): string {
@@ -141,7 +145,7 @@ export class HomeComponent {
   cards2 = [
     
     {
-      id:'03',
+      id:'01',
       title: 'Make a Difference: Give back at these event ',
       description: 'Some quick example text to build on the card title and make up the bulk of the card content',
       buttonText: 'Button',
@@ -153,7 +157,7 @@ export class HomeComponent {
       date:'Oct 1, Sat | 7:00 PM Onwards'
     },
     {
-      id:'04',
+      id:'02',
       title: 'Womens History month 2024',
       description: 'Some quick example text to build on the card title and make up the bulk of the card content',
       buttonText: 'Button',
@@ -165,7 +169,7 @@ export class HomeComponent {
       date:'Oct 1, Sat | 7:00 PM Onwards'
     },
     {
-      id:'05',
+      id:'03',
       title: 'Where green and GTFO at St Patricks Day Special',
       description: 'Some quick example text to build on the card title and make up the bulk of the card content',
       buttonText: 'Button',
@@ -177,7 +181,56 @@ export class HomeComponent {
       date:'Oct 1, Sat | 7:00 PM Onwards'
     },
     {
+      id:'04',
+      title: 'Find your pride in San Francisco year-round fest',
+      description: 'Some quick example text to build on the card title and make up the bulk of the card content',
+      buttonText: 'Button',
+      calender:'images/Calendar.png',
+      location:'images/Location.png',
+      label:'images/GreeLabel.png',
+      img: 'images/MaskGroup141190@2x.png',
+      auther:'anubhandh',
+      date:'Oct 1, Sat | 7:00 PM Onwards'
+    },
+
+    {
+      id:'05',
+      title: 'Make a Difference: Give back at these event ',
+      description: 'Some quick example text to build on the card title and make up the bulk of the card content',
+      buttonText: 'Button',
+      calender:'images/Calendar.png',
+      location:'images/Location.png',
+      label:'images/GreeLabel.png',
+      img: 'images/MaskGroup141190.png',
+      auther:'anubhandh',
+      date:'Oct 1, Sat | 7:00 PM Onwards'
+    },
+    {
       id:'06',
+      title: 'Womens History month 2024',
+      description: 'Some quick example text to build on the card title and make up the bulk of the card content',
+      buttonText: 'Button',
+      calender:'images/Calendar.png',
+      location:'images/Location.png',
+      label:'images/GreeLabel.png',
+      img: 'images/MaskGroup1411901.png',
+      auther:'anubhandh',
+      date:'Oct 1, Sat | 7:00 PM Onwards'
+    },
+    {
+      id:'07',
+      title: 'Where green and GTFO at St Patricks Day Special',
+      description: 'Some quick example text to build on the card title and make up the bulk of the card content',
+      buttonText: 'Button',
+      calender:'images/Calendar.png',
+      location:'images/Location.png',
+      label:'images/GreeLabel.png',
+      img: 'images/MaskGroup1411902.png',
+      auther:'anubhandh',
+      date:'Oct 1, Sat | 7:00 PM Onwards'
+    },
+    {
+      id:'08',
       title: 'Find your pride in San Francisco year-round fest',
       description: 'Some quick example text to build on the card title and make up the bulk of the card content',
       buttonText: 'Button',
@@ -190,4 +243,11 @@ export class HomeComponent {
     },
 
   ];
+
+  public onTableDataChange(event: any) {
+    this.p = event;
+    
+  }
+
+  
 }
