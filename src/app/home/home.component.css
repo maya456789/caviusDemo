@@ -142,7 +142,7 @@ h1{
  
   .bridgeImg{
   display: flex;
-  margin:auto ;
+  margin:30px 0px 30px 50px ;
   justify-content: center;  /* Centering y-axis */
   align-items :center; /* Centering x-axis */
   }
@@ -173,11 +173,20 @@ h1{
 
     .bridgeImg{
       display: flex;
-      margin-top:15px ;
+      margin:auto;
       justify-content: center;  /* Centering y-axis */
       align-items :center; /* Centering x-axis */
       }
      
+ }
+
+ @media (min-width:576px) and (max-width: 781px){
+   .bridgeImg{
+    display: flex;
+    margin:auto;
+    justify-content: center;  /* Centering y-axis */
+    align-items :center; /* Centering x-axis */
+    }
  }
 
  @media screen and (min-width: 577px) and (max-width: 992px){
